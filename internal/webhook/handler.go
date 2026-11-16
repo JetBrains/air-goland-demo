@@ -36,7 +36,8 @@ func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if err := validateEventID(ev.ID); err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		slog.WarnContext(ctx, "validating webhook", "error", err)
+		http.Error(w, "invalid event id", http.StatusBadRequest)
 		return
 	}
 	ev.Provider = r.PathValue("provider")

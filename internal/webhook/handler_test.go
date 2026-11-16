@@ -58,6 +58,7 @@ func TestHandler_ServeHTTP(t *testing.T) {
 		h := NewHandler(store.NewMemory())
 		rec := post(h, readEvent(t, "invalid_id.json"))
 		assert.Equal(t, http.StatusBadRequest, rec.Code)
+		assert.Equal(t, "invalid event id", strings.TrimSpace(rec.Body.String()))
 	})
 
 	t.Run("Body too large", func(t *testing.T) {
