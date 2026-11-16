@@ -1,4 +1,4 @@
-# hookrelay
+# Air GoLand Demo
 
 A small Go service that receives signed payment webhooks and stores each event once.
 It's the demo project for the GoLand blog post about JetBrains Air and the `goland-profiler` skill.
