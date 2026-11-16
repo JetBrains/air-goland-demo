@@ -29,7 +29,7 @@ Event IDs must match `^evt_[A-Za-z0-9]{24}$`.
 
 ## Signatures
 
-Every request carries a `Webhook-Signature` header:
+Every request carries a `Webhook-Signature` header, shown below:
 
 ```
 Webhook-Signature: t=<unix timestamp in seconds>,v1=<signature>
