@@ -2,6 +2,7 @@
 
 A small Go service that receives signed payment webhooks and stores each event once.
 It's the demo project for the GoLand blog post about JetBrains Air and the `goland-profiler` skill.
+The brief the agents worked from is in [BRIEF.md](BRIEF.md).
 
 Requires Go 1.27.3 or later.
 
@@ -33,4 +34,4 @@ go test ./...
 go test -run '^$' -bench BenchmarkHandler -benchmem ./internal/webhook
 ```
 
-Compare your fix with ours using `git diff main fixed`.
+Compare your working copy with our fix using `git diff origin/fixed`, or view our fix on its own with `git diff origin/main origin/fixed`.
